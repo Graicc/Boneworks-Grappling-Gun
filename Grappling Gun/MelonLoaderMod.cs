@@ -162,6 +162,7 @@ namespace Grappling_Gun
 
         void LoadPrefs() { // more settings
             gunname = ModPrefs.GetString(BuildInfo.Name, "gunname").ToLower();
+            gunname = gunname == "any" ? "" : gunname;
         }
     }
 }
